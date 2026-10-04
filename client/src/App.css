@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1117;
+  color: white;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: #171a22;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 0;
+}
+
+.status {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 17px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.connected {
+  background: #35d07f;
+}
+
+.disconnected {
+  background: #e74c3c;
+}
+
+.role {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.call-status {
+  text-align: center;
+  font-size: 18px;
+  margin: 15px 0;
+  color: #b8c7ff;
+}
+
+.timer {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+.mic-button,
+.audio-button {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #343947;
+  color: white;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.controls button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  background: #3b4252;
+  color: white;
+  font-size: 15px;
+}
+
+.controls .end-button {
+  background: #d64545;
+}
+
+.error {
+  background: #4b2024;
+  color: #ffb3b3;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.chat-section {
+  margin-top: 30px;
+  border-top: 1px solid #30343f;
+  padding-top: 20px;
+}
+
+.chat-section h3 {
+  margin-bottom: 15px;
+}
+
+.messages {
+  height: 230px;
+  overflow-y: auto;
+  background: #101219;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+}
+
+.message {
+  background: #272c38;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.message.own {
+  margin-left: auto;
+  background: #30476b;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.message-text {
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #383e4b;
+  background: #101219;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+}
+
+.chat-form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4b73c5;
+  color: white;
+  cursor: pointer;
+}
+
+audio {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+}
